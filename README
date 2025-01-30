@@ -1,0 +1,15 @@
+*Running Dave's Vulnerable Webapp*
+
+Do not run this exposed to the Internet. Do it in a lab behind NAT.
+
+Use pip install -r requirements.txt to get Flask et. al.
+
+Then create and activate a virtual environment. E.g.:
+
+python -m venv venv           # Create a fresh venv
+source venv/bin/activate      # Activate (Unix)
+venv\Scripts\activate         # Activate (Windows)
+
+This webapp has a private API at /internal-api/health.
+It should only accept local connections.
+By exploiting the public-facing app, we can view it.
